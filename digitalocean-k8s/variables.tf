@@ -2,13 +2,13 @@
 #Description : Terraform label module variables.
 variable "name" {
   type        = string
-  default     = "k8s-sg-do-1"
+  default     = ""
   description = "Name  (e.g. `app` or `cluster`)."
 }
 
 variable "environment" {
   type        = string
-  default     = "development"
+  default     = ""
   description = "Environment (e.g. `prod`, `dev`, `staging`)."
 }
 

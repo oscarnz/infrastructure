@@ -30,11 +30,11 @@ resource "digitalocean_kubernetes_cluster" "main" {
     for_each = var.critical_node_pool
     content {
       name       = lookup(node_pool.value, "name", "critical")
-      size       = lookup(node_pool.value, "size", "s-1vcpu-2gb")
-      node_count = lookup(node_pool.value, "auto_scale", true) ? null : lookup(node_pool.value, "node_count", 1)
-      auto_scale = lookup(node_pool.value, "auto_scale", true)
+      size       = lookup(node_pool.value, "size", "s-2vcpu-4gb")
+      node_count = lookup(node_pool.value, "auto_scale", false) ? null : lookup(node_pool.value, "node_count", 1)
+      auto_scale = lookup(node_pool.value, "auto_scale", false)
       min_nodes  = lookup(node_pool.value, "min_nodes", 1)
-      max_nodes  = lookup(node_pool.value, "max_nodes", 2)
+      max_nodes  = lookup(node_pool.value, "max_nodes", 3)
       tags       = lookup(node_pool.value, "tags", null)
       labels     = lookup(node_pool.value, "labels", null)
       dynamic "taint" {
