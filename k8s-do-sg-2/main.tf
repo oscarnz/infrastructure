@@ -17,7 +17,7 @@ module "vpc" {
 ##------------------------------------------------
 module "cluster" {
   source          = "./../../"
-  name            = "k8s-do-sg-3"
+  name            = "k8s-do-sg-4"
   environment     = "development"
   region          = "sgp1"
   cluster_version = "1.33.1-do.5"
