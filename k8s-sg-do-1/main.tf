@@ -22,7 +22,7 @@ module "vpc" {
 ## Kubernetes module call
 ##------------------------------------------------
 module "cluster" {
-  source          = "../"
+  source          = "../default/"
   name            = local.name
   environment     = local.environment
   region          = local.region
