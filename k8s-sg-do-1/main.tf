@@ -26,7 +26,7 @@ module "cluster" {
   name            = local.name
   environment     = local.environment
   region          = local.region
-  cluster_version = "1.33.1-do.5"
+  cluster_version = "1.34.1-do.2"
   vpc_uuid        = module.vpc.id
 
   critical_node_pool = {
